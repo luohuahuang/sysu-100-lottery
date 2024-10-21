@@ -138,8 +138,7 @@
     <div id="wrapper" class="mh">
         <h1 style="text-align: center">中山大学百年华诞暨新加坡校友会成立十周年晚宴</h1>
         <div class="h20"></div>
-        <h2 class="content" style="text-align: center;">博学 审问 慎思 明辨 独行</h2>
-
+        <h2 class="content" style="text-align: center; color: #ff0; margin: 26px; font-size: 56px;">抽奖活动</h2>
         <script type="text/javascript">
             var game;
 
@@ -176,8 +175,6 @@
                 </ul>
 
                 <div id="tabs-1">
-                    <h1 id="event_title"><span>线上抽奖</span></h1>
-
                     <div id="rotate_div" style="display: block;">
                         <div><span id="current_step" style="display: none;">一等奖(1个)</span></div>
 
@@ -189,8 +186,6 @@
                 <!-- /#tabs-1 -->
 
                 <div id="tabs-2" class="ui-tabs-panel ui-widget-content ui-corner-bottom ui-tabs-hide">
-                    <label>活动标题</label>
-                    <div><input type="text" name="title" value="抽奖活动"></div>
 
                     <label>奖项设置</label>
                     <div>每行一个奖项, 格式为竖线分隔的: 奖项名|数量|每次抽几个|奖品</div>
@@ -737,8 +732,6 @@ BAI SIYU
                         }
                         game.candidates.push(p);
                     }
-
-                    $('#event_title span').html($('input[name=title]').val());
                     // $('#tabs-1').css('background', 'url(' + $('input[name=background_image]').val() + ') center center no-repeat');
 
                     game.init();
