@@ -76,7 +76,7 @@
             width: 640px;
             text-align: center;
             background: #ff3;
-            border: 6px solid #03f;
+            /*border: 6px solid #03f;*/
         }
 
         #current_step {
@@ -136,13 +136,9 @@
     </style>
 </head>
 
-<body class="bg index">
-    <div id="container">
-        <div id="wrapper" class="mh">
-            <h2 style="text-align: center">在线抽奖</h2>
-            <div class="h20"></div>
-            <div class="content" style="text-align: center;">一个简单的在线抽奖系统, 可用于公司年会抽奖, 电视台抽奖等，可以自己设定抽奖名单、抽奖人数、每次出奖人数，有防止重复得奖的功能。</div>
+<body class="bg index" style="background: url(&quot;images/2.png&quot;) center center no-repeat;" class="ui-tabs-panel ui-widget-content ui-corner-bottom">
 
+            <h2 style="text-align: center">中山大学百年华诞暨新加坡校友会成立十周年晚会</h2>
             <script type="text/javascript">
                 var game;
 
@@ -165,7 +161,6 @@
                 });
             </script>
 
-            <div id="main">
                 <div id="loading" style="text-align: center; display: none;">
                     <h2>Loading...</h2>
                 </div>
@@ -178,7 +173,7 @@
                         <li class="ui-corner-top ui-state-default"><a href="#tabs-4">帮助</a></li>
                     </ul>
 
-                    <div id="tabs-1" style="background: url(&quot;images/2.jpg&quot;) center center no-repeat;" class="ui-tabs-panel ui-widget-content ui-corner-bottom">
+                    <div id="tabs-1">
                         <h1 id="event_title"><span>抽奖活动</span></h1>
 
                         <div id="rotate_div" style="display: block;">
@@ -188,7 +183,6 @@
 
                             <div id="print_box" style="display: block;">请按回车开始</div>
                         </div>
-                    </div>
                     <!-- /#tabs-1 -->
 
                     <div id="tabs-2" style="background: #fff;" class="ui-tabs-panel ui-widget-content ui-corner-bottom ui-tabs-hide">
@@ -239,7 +233,7 @@
 
                         <label>背景图片</label>
                         <div>可以输入图片链接使用网络上的图片, 也可以把图片拷贝到当前目录, 把图片文件名填入即可.</div>
-                        <div><input name="background_image" type="text" value="images/2.jpg"></div>
+                        <div><input name="background_image" type="text" value="images/2.png"></div>
 
 
                         <p><input type="button" value="保存" onclick="save_setting()"></p>
@@ -640,9 +634,6 @@
                     }
                 </script>
 
-            </div>
-
-        </div>
     </div>
 </body>
 
