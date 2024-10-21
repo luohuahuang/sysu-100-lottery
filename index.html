@@ -13,10 +13,10 @@
 
     <style type="text/css">
         table {
-            margin: 12px auto;
+            /*margin: 12px auto;*/
             border-collapse: collapse;
             width: 95%;
-            background: #fff;
+            /*background: #fff;*/
         }
 
         th,
@@ -88,7 +88,7 @@
 
         #tabs-1 {
             padding: 4px;
-            font-size: 14px;
+            font-size: 8px;
             text-align: center;
             height: 580px;
         }
@@ -97,7 +97,8 @@
         #tabs-3,
         #tabs-4 {
             padding: 4px;
-            border: 1px solid #ccc;
+            /*border: 1px solid #ccc;*/
+            height: 580px;
         }
 
         #tabs-3 h3,
@@ -132,10 +133,10 @@
     </style>
 </head>
 
-<body class="bg index">
+<body class="bg index"  style="background: url(&quot;images/2.png&quot;) center center no-repeat;" class="ui-tabs-panel ui-widget-content ui-corner-bottom">
 <div id="container">
     <div id="wrapper" class="mh">
-        <h1 style="text-align: center">中山大学百年华诞暨新加坡校友会成立十周年晚宴在线抽奖</h1>
+        <h1 style="text-align: center">中山大学百年华诞暨新加坡校友会成立十周年晚宴</h1>
         <div class="h20"></div>
         <h2 class="content" style="text-align: center;">博学 审问 慎思 明辨 独行</h2>
 
@@ -174,8 +175,8 @@
                     <li class="ui-corner-top ui-state-default"><a href="#tabs-4">帮助</a></li>
                 </ul>
 
-                <div id="tabs-1" style="background: url(&quot;images/2.png&quot;) center center no-repeat;" class="ui-tabs-panel ui-widget-content ui-corner-bottom">
-                    <h1 id="event_title"><span>抽奖活动</span></h1>
+                <div id="tabs-1">
+                    <h1 id="event_title"><span>线上抽奖</span></h1>
 
                     <div id="rotate_div" style="display: block;">
                         <div><span id="current_step" style="display: none;">一等奖(1个)</span></div>
@@ -187,7 +188,7 @@
                 </div>
                 <!-- /#tabs-1 -->
 
-                <div id="tabs-2" style="background: #fff;" class="ui-tabs-panel ui-widget-content ui-corner-bottom ui-tabs-hide">
+                <div id="tabs-2" class="ui-tabs-panel ui-widget-content ui-corner-bottom ui-tabs-hide">
                     <label>活动标题</label>
                     <div><input type="text" name="title" value="抽奖活动"></div>
 
@@ -491,9 +492,9 @@ BAI SIYU
                         }
 
                         show_current_step('');
-                        var str = '请按回车开始';
+                        var str = '请按Enter键开始';
                         str += '<br/><br/>';
-                        print_box('请按回车开始');
+                        print_box('请按Enter键开始');
 
                         $('#rolling_board').hide();
                         $('#rotate_div').css('background', '');
@@ -549,7 +550,7 @@ BAI SIYU
                 }
 
                 function on_open() {
-                    show_current_step('活动说明');
+                    // show_current_step('活动说明');
 
                     var str = '<table align="center">';
                     str += '<tr><th>奖项</th><th>数量</th><th>奖品</th></tr>\n';
@@ -573,7 +574,7 @@ BAI SIYU
 
                 function on_step_open() {
                     show_current_step();
-                    print_box('按回车开始');
+                    print_box('请按Enter键开始');
                     $('#rolling_board').html('...');
                 }
 
@@ -608,7 +609,7 @@ BAI SIYU
                     rotate_run();
 
                     show_current_step();
-                    print_box('按回车停止');
+                    print_box('请按Enter键停止');
                 }
 
 
@@ -642,7 +643,7 @@ BAI SIYU
                         game.candidates = array_del_all(game.candidates, arr);
 
                         show_results();
-                        print_box('按回车继续');
+                        print_box('请按Enter键继续');
 
                         if (game.results[game.step].length == game.prizes[game.step].num) {
                             game.step++;
@@ -738,7 +739,7 @@ BAI SIYU
                     }
 
                     $('#event_title span').html($('input[name=title]').val());
-                    $('#tabs-1').css('background', 'url(' + $('input[name=background_image]').val() + ') center center no-repeat');
+                    // $('#tabs-1').css('background', 'url(' + $('input[name=background_image]').val() + ') center center no-repeat');
 
                     game.init();
                 }
